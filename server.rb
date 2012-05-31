@@ -1,13 +1,18 @@
 require "rubygems"
-require "sprockets"
 require "rack"
+require "sprockets"
+
+require "coffee-script"
+require "sass"
 
 app = Rack::Builder.app do
 
-    map '/assets' do        
-        run Sprockets::Environment.new.tap { |e| e.append_path "." }
+    map '/' do
+        run Sprockets::Environment.new.tap {|e|
+            ARGV.each {|path| e.append_path path}
+        }
     end
-    
+
 end
 
-Rack::Handler::WEBrick.run app, :Port => 9494
+Rack::Server.start :app => app, :Port => 9494

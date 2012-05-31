@@ -1,4 +1,6 @@
 source 'http://rubygems.org'
 
 gem "coffee-script"
-gem "sprockets", "~> 2.0.0.beta.10"
+gem "sprockets", "~> 2.4"
+gem "sprockets-sass"
+gem "uglifier", "~> 1.2.0"

@@ -7,18 +7,27 @@ GEM
     coffee-script-source (1.1.1)
     execjs (1.2.0)
       multi_json (~> 1.0)
-    hike (1.1.0)
+    hike (1.2.1)
     multi_json (1.0.3)
-    rack (1.3.0)
-    sprockets (2.0.0.beta.10)
-      hike (~> 1.0)
+    rack (1.3.6)
+    sprockets (2.4.0)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    tilt (1.3.2)
+    sprockets-sass (0.8.0)
+      sprockets (~> 2.0)
+      tilt (~> 1.1)
+    tilt (1.3.3)
+    uglifier (1.2.4)
+      execjs (>= 0.3.0)
+      multi_json (>= 1.0.2)
 
 PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
   coffee-script
-  sprockets (~> 2.0.0.beta.10)
+  sprockets (~> 2.4)
+  sprockets-sass
+  uglifier (~> 1.2.0)
